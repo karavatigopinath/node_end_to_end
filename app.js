@@ -1,7 +1,8 @@
 import express from 'express'
+import 'dotenv/config'
 const app = express();
 app.use(express.json())
-const port = 3002;
+const port = process.env.PORT || 3002;
 app.get('/',(req,res)=>{
   return res.send('this is response from express..!')
 })
